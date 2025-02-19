@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kholipha's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- GSAP CDN for animations -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kholipha's Advanced Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- GSAP and ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <!-- ScrollTrigger plugin for GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <!-- Three.js CDN (optional for advanced 3D elements) -->
+  <!-- Three.js for 3D particle background -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Typed.js for typewriter effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
   <!-- Navigation -->
   <nav>
     <div class="logo">Kholipha</div>
-    <ul class="nav-links">
+    <div class="hamburger" id="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#resume">Resume</a></li>
@@ -24,12 +35,15 @@
     </ul>
     <button id="theme-toggle">Toggle Theme</button>
   </nav>
-  
+
+  <!-- 3D Particle Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
   <!-- Hero Section -->
   <header class="hero">
     <div class="hero-content">
-      <h1>Welcome to My Colorful World</h1>
-      <p>AI, Web Development, and Game Design</p>
+      <h1>Welcome to My Advanced Portfolio</h1>
+      <div id="typed"></div>
       <a href="#projects" class="btn">Explore My Work</a>
     </div>
   </header>
@@ -38,7 +52,12 @@
   <section id="about">
     <div class="container">
       <h2>About Me</h2>
-      <p>I’m an IT professional passionate about artificial intelligence, game development, and creating stunning websites with advanced animations. I specialize in modern web interfaces and vibrant, interactive designs.</p>
+      <p>
+        I’m an IT professional passionate about artificial intelligence, game
+        development, and creating visually immersive websites. My work is driven
+        by a deep interest in AI-driven image enhancement, dynamic web interfaces,
+        and interactive 3D experiences.
+      </p>
     </div>
   </section>
 
@@ -47,28 +66,44 @@
     <div class="container">
       <h2>Projects</h2>
       <div class="project-grid">
-        <div class="project-card">
-          <h3>AI Image Enhancer</h3>
-          <p>An advanced AI-driven image restoration and enhancement model.</p>
+        <!-- Each project card has data attributes for modal details -->
+        <div class="project-card" data-title="AI-Powered Data Visualizer" data-description="An interactive, real-time data visualization platform leveraging machine learning for predictive analytics. Features live data feeds, dynamic charts, and insightful metrics.">
+          <h3>AI-Powered Data Visualizer</h3>
+          <p>Interactive data visualization with AI insights.</p>
         </div>
-        <div class="project-card">
-          <h3>Interactive 3D Game</h3>
-          <p>Immersive 3D and FPS game using Unreal Engine and Python.</p>
+        <div class="project-card" data-title="3D Virtual Tour" data-description="A fully immersive 3D virtual tour built with Three.js and WebGL. Explore interactive environments with smooth transitions and engaging narratives.">
+          <h3>3D Virtual Tour</h3>
+          <p>Explore immersive 3D environments.</p>
         </div>
-        <div class="project-card">
-          <h3>Dynamic Web Interfaces</h3>
-          <p>Ultra-advanced CSS styles and animations to create engaging web experiences.</p>
+        <div class="project-card" data-title="Real-Time Multiplayer Game" data-description="A fast-paced online multiplayer game featuring advanced animations, responsive controls, and real-time interactions using cutting-edge web technologies.">
+          <h3>Real-Time Multiplayer Game</h3>
+          <p>Online multiplayer with advanced animations.</p>
+        </div>
+        <div class="project-card" data-title="Dynamic Web Interface" data-description="A cutting-edge website design featuring ultra-advanced CSS animations, micro-interactions, parallax scrolling, and an intuitive UI for an enhanced user experience.">
+          <h3>Dynamic Web Interface</h3>
+          <p>Cutting-edge design with interactive effects.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
   <!-- Resume Section -->
   <section id="resume">
     <div class="container">
       <h2>Resume</h2>
-      <p>You can download my resume for more details.</p>
-      <a href="https://builder.zety.com/resume/final-resume" class="btn" target="_blank">Download Resume</a>
+      <p>
+        For a detailed overview of my experience and skills, download my resume.
+      </p>
+      <a href="./resume.pdf" class="btn" download>Download Resume</a>
     </div>
   </section>
 
