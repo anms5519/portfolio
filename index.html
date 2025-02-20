@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kholipha Ahmmad Al-Amin – Legendary Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- GSAP & ScrollTrigger for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Three.js for particle background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Typed.js for typewriter effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <!-- (Optional) Google reCAPTCHA -->
+  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Kholipha</div>
+    <div class="hamburger" id="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">Summary</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#work">Work Experience</a></li>
+      <li><a href="#projects">Projects & Research</a></li>
+      <li><a href="#trainings">Trainings</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#languages">Languages</a></li>
+      <li><a href="#disclaimer">Disclaimer</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle">Toggle Theme</button>
+  </nav>
+
+  <!-- 3D Particle Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Welcome to My Legendary Portfolio</h1>
+      <div id="typed"></div>
+      <a href="#work" class="btn">Explore My Work</a>
+    </div>
+  </header>
+
+  <!-- Professional Summary -->
+  <section id="about">
+    <div class="container">
+      <h2>Professional Summary</h2>
+      <p>
+        Passionate IT Professional with expertise in leveraging artificial intelligence to improve image quality and advance machine learning. Deeply interested in AI‑driven image enhancement, game development using Unreal Engine and Python for immersive 3D/FPS experiences, and cutting‑edge web development with ultra‑advanced CSS and modern UI/UX design. Constantly exploring startup ideas, technology‑driven business solutions, and academic research in LaTeX documentation, VBA‑based data visualization, and premium presentations. Organized, dependable, and adept at managing multiple priorities with strong problem‑solving and interpersonal skills.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>Bachelor of Science in Computer Science & Engineering</h3>
+        <p>Atish Dipankar University of Science & Technology, Dhaka</p>
+        <p><strong>GPA:</strong> 3.56</p>
+        <p><strong>Thesis:</strong> THETAEnhancer+ — An Advanced AI‑Driven Image Restoration and Enhancement Model</p>
+        <p><em>Jan 2022 – Expected Aug 2026</em></p>
+      </div>
+      <div class="education-item">
+        <h3>Higher Secondary School</h3>
+        <p>Adamjee Cantonment College — Shaheed Sharani, Dhaka</p>
+        <p><strong>GPA:</strong> 5.00/5.00</p>
+        <p><em>2020</em></p>
+      </div>
+      <div class="education-item">
+        <h3>Secondary School</h3>
+        <p>Civil Aviation School & College, Dhaka</p>
+        <p><strong>GPA:</strong> 5.00/5.00</p>
+        <p><em>2018</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications">
+    <div class="container">
+      <h2>Certifications</h2>
+      <div class="certificate-grid">
+        <div class="certificate-card" data-title="HHP (Mobile) Service For Hardware and Software" data-img="images/certificates/hhp.png">
+          <h3>HHP (Mobile) Service For Hardware and Software</h3>
+          <span class="cert-date">2024-01</span>
+        </div>
+        <div class="certificate-card" data-title="Mobile Game Development (Cross Platform)" data-img="images/certificates/mobile_game.png">
+          <h3>Mobile Game Development (Cross Platform)</h3>
+          <span class="cert-date">2022-02</span>
+        </div>
+        <div class="certificate-card" data-title="Beginner’s Guide to Python 3 Programming" data-img="images/certificates/python.png">
+          <h3>Beginner’s Guide to Python 3 Programming</h3>
+          <span class="cert-date">2023-02</span>
+        </div>
+        <div class="certificate-card" data-title="Professional C Programming for Job Interview" data-img="images/certificates/c_programming.png">
+          <h3>Professional C Programming for Job Interview</h3>
+          <span class="cert-date">2023-06</span>
+        </div>
+        <div class="certificate-card" data-title="EF SET Certificate" data-img="images/certificates/efset.png">
+          <h3>EF SET Certificate</h3>
+          <span class="cert-date">2025-02</span>
+        </div>
+        <div class="certificate-card" data-title="CSS (Basic) Certificate" data-img="images/certificates/css.png">
+          <h3>CSS (Basic) Certificate</h3>
+          <span class="cert-date">2025-01</span>
+        </div>
+        <div class="certificate-card" data-title="CHAT — Toolkit to Improve Community Engagement in Emergencies" data-img="images/certificates/chat.png">
+          <h3>CHAT — Toolkit to Improve Community Engagement in Emergencies</h3>
+          <span class="cert-date">2025-01</span>
+        </div>
+        <div class="certificate-card" data-title="Cybersecurity Analyst Job Simulation" data-img="images/certificates/cybersecurity.png">
+          <h3>Cybersecurity Analyst Job Simulation</h3>
+          <span class="cert-date">2024-04</span>
+        </div>
+        <div class="certificate-card" data-title="Data Visualisation: Empowering Business with Effective Insights" data-img="images/certificates/datavis.png">
+          <h3>Data Visualisation: Empowering Business with Effective Insights</h3>
+          <span class="cert-date">2024-04</span>
+        </div>
+        <div class="certificate-card" data-title="A2Z Of Finance: Finance Beginner Course" data-img="images/certificates/a2z.png">
+          <h3>A2Z Of Finance: Finance Beginner Course</h3>
+          <span class="cert-date">2024-04</span>
+        </div>
+        <div class="certificate-card" data-title="Digital Marketing Strategist Certificate" data-img="images/certificates/digital_marketing.png">
+          <h3>Digital Marketing Strategist Certificate</h3>
+          <span class="cert-date">2024-04</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate Modal (for enlarged certificate view) -->
+  <div id="certificate-modal" class="modal">
+    <div class="modal-content certificate-modal-content">
+      <span class="close-btn">&times;</span>
+      <img id="certificate-image" src="" alt="Certificate">
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Technical:</strong> Website Development, SEO Analysis, Game Design, Unreal Engine, Motion Graphics, Adobe Photoshop, Adobe Acrobat</li>
+        <li><strong>Programming:</strong> JavaScript, C, C++, C#, Python, MATLAB, SQL Queries</li>
+        <li><strong>Data & Analysis:</strong> Predictive Analytics, Data Acquisition, Data Interpretation, Data Visualization, Issue Resolution, Decision Making, Organizational Strategy, Social Media Strategy, Project Coordination</li>
+        <li><strong>Interpersonal:</strong> Multicultural Communication, Technical Communication, Team Collaboration, Public Speaking, Adaptability, Client Interaction, Leadership, Customer Service</li>
+        <li><strong>Databases:</strong> PostgreSQL, MariaDB, Microsoft Office</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Work Experience -->
+  <section id="work">
+    <div class="container">
+      <h2>Work Experience</h2>
+      <div class="work-item">
+        <h3>Commercial Designer, Fiverr (Freelance)</h3>
+        <p><em>Jan 2020 – Present</em></p>
+        <ul>
+          <li>Designed high-quality branding, advertisements, and marketing materials for international clients.</li>
+          <li>Created logos, business cards, brochures, flyers, social media ads, and packaging designs.</li>
+          <li>Developed visually compelling UI/UX designs for websites and mobile applications.</li>
+          <li>Maintained a 5‑star rating and high client satisfaction through exceptional design and communication.</li>
+        </ul>
+      </div>
+      <div class="work-item">
+        <h3>Retail Pharmacist, RANI MEDICAL CORNER, Dhaka</h3>
+        <p><em>Jan 2012 – Present</em></p>
+        <p>Managed day‑to‑day pharmacy operations and sales of medicines.</p>
+      </div>
+      <div class="work-item">
+        <h3>Data Visualization Specialist (Job Simulation), Tata Consultancy Services</h3>
+        <p><em>Jun 2024 – Jul 2024</em></p>
+        <ul>
+          <li>Designed interactive dashboards for complex datasets.</li>
+          <li>Utilized Python, Excel, and Power BI for data transformation and visualization.</li>
+          <li>Applied statistical analysis and data storytelling principles.</li>
+        </ul>
+      </div>
+      <div class="work-item">
+        <h3>Cybersecurity Analyst (Job Simulation), Tata Consultancy Services</h3>
+        <p><em>Apr 2024 – May 2024</em></p>
+        <ul>
+          <li>Conducted risk assessments and implemented security measures.</li>
+          <li>Analyzed network vulnerabilities and applied threat detection techniques.</li>
+          <li>Utilized cybersecurity tools for monitoring and incident response.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects & Research -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects & Research</h2>
+      <div class="project-grid">
+        <div class="project-card" data-title="THETAEnhancer+" data-description="An Advanced AI‑Driven Image Restoration and Enhancement Model (Thesis)">
+          <h3>THETAEnhancer+</h3>
+          <p>Advanced AI‑driven image restoration & enhancement model.</p>
+        </div>
+        <div class="project-card">
+          <h3>AI Image Enhancer</h3>
+          <p>An advanced AI-driven image restoration and enhancement model.</p>
+        </div>
+        <div class="project-card">
+          <h3>Interactive 3D Game</h3>
+          <p>Immersive 3D and FPS game using Unreal Engine and Python.</p>
+        </div>
+        <div class="project-card">
+          <h3>Dynamic Web Interfaces</h3>
+          <p>Ultra-advanced CSS styles and animations to create engaging web experiences.</p>
+        </div>
+        <div class="project-card" data-title="AI-Powered Data Visualizer" data-description="An interactive, real-time data visualization platform leveraging machine learning for predictive analytics. Features live data feeds, dynamic charts, and insightful metrics.">
+          <h3>AI-Powered Data Visualizer</h3>
+          <p>Interactive data visualization with AI insights.</p>
+        </div>
+        <div class="project-card" data-title="3D Virtual Tour" data-description="A fully immersive 3D virtual tour built with Three.js and WebGL. Explore interactive environments with smooth transitions and engaging narratives.">
+          <h3>3D Virtual Tour</h3>
+          <p>Explore immersive 3D environments.</p>
+        </div>
+        <div class="project-card" data-title="Real-Time Multiplayer Game" data-description="A fast-paced online multiplayer game featuring advanced animations, responsive controls, and real-time interactions using cutting-edge web technologies.">
+          <h3>Real-Time Multiplayer Game</h3>
+          <p>Online multiplayer with advanced animations.</p>
+        </div>
+        <div class="project-card" data-title="Dynamic Web Interface" data-description="A cutting-edge website design featuring ultra-advanced CSS animations, micro-interactions, parallax scrolling, and an intuitive UI for an enhanced user experience.">
+          <h3>Dynamic Web Interface</h3>
+          <p>Cutting-edge design with interactive effects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainings & Workshops -->
+  <section id="trainings">
+    <div class="container">
+      <h2>Trainings & Workshops</h2>
+      <ul>
+        <li>Undergraduates Projects for CSE Students: A Comprehensive Guideline</li>
+        <li>Workshop on Beginner’s Guide to Python 3 Programming</li>
+        <li>Machine Learning and AI Workshop</li>
+        <li>Web Development Bootcamp</li>
+        <li>Arduino Programming and Applications Workshop</li>
+        <li>Workshop on Professional C Programming for Job Interview</li>
+        <li>AR/VR Workshop</li>
+        <li>Software Testing and Quality Assurance Conference</li>
+        <li>DevOps and CI/CD Conference</li>
+        <li>Game Development Using Unity Webinar</li>
+        <li>Cybersecurity and Ethical Hacking Workshop</li>
+        <li>Mobile App Development Seminar</li>
+        <li>Blockchain and Cryptocurrency Workshop</li>
+        <li>IoT Workshop</li>
+        <li>Data Science and Analytics Workshop</li>
+        <li>Cloud Computing Workshop</li>
+        <li>Dive Into R: A Hands-on Programming Workshop</li>
+        <li>SQA Webinar</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Management & Leadership -->
+  <section id="leadership">
+    <div class="container">
+      <h2>Management & Leadership</h2>
+      <ul>
+        <li>Adamjee Eco Amica Club - AEAC, President (2019 – 2020)</li>
+        <li>Leo Club of Dhaka Mega City, Graphics Designer (2022 – 2023)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Languages -->
+  <section id="languages">
+    <div class="container">
+      <h2>Languages</h2>
+      <ul>
+        <li>Bengali: Native</li>
+        <li>English: Proficient (C2)</li>
+        <li>Hindi: Advanced (C1)</li>
+        <li>Urdu: Intermediate (B1)</li>
+        <li>Arabic: Basic</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <!-- Updated input names to match EmailJS template parameters -->
+        <input type="text" name="from_name" placeholder="Your Name" required>
+        <input type="email" name="from_email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <input type="text" name="phone" placeholder="Phone (Optional)">
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <!-- (Optional) Insert reCAPTCHA widget here -->
+        <!-- <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div> -->
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Toast Notification for form responses -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Kholipha Ahmmad Al-Amin. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/kholipha-ahmmad-al-amin-3856b1305/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/anms5519" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
